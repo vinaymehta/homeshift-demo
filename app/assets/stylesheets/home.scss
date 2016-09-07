@@ -1,0 +1,8 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.input-group-addon:hover{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

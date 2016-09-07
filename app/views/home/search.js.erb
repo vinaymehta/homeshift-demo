@@ -1,0 +1,13 @@
+$('#loading').hide();
+<% if @invalid %>
+  alert("Zipcode Invalid. Please enter valid zipcode");
+<% elsif !@availability_aw and !@availability_thw %>
+  $('#results').show();
+  $('.list-group').html('<li class="list-group-item">No providers found for your area</li>');
+<% elsif @availability_aw and @availability_thw %>
+  $('#results').show();
+  $('.list-group').html('<li class="list-group-item"><%= image_tag 'affinity-water.gif' %></li><li class="list-group-item"><%= image_tag 'thames-water.png' %></li>');
+<% else %>
+  $('#results').show();
+  $('.list-group').html('<li class="list-group-item"><%= image_tag @availability_aw ? 'affinity-water.gif' : 'thames-water.png' %></li>');
+<% end %>

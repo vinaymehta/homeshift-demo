@@ -1,0 +1,16 @@
+<div class="text-center">
+  <h1>Search your Water Supplier</h1>
+  <div class="input-group col-md-6 col-md-offset-3">
+    <input type="text" class="form-control" placeholder="Zip code" aria-describedby="basic-addon2" id="search-text">
+    <span class="input-group-addon" id="search-btn">Search</span>
+  </div>
+  <div class="input-group col-md-6 col-md-offset-3" id="results" style="display: none;">
+    <h3>Providers in your area</h3>
+    <ul class="list-group">
+
+    </ul>
+  </div>
+  <div class="input-group col-md-6 col-md-offset-3" id="loading" style="display: none;">
+    <%= image_tag 'loading.gif' %>
+  </div>
+</div>
